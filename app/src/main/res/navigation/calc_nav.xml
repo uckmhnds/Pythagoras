@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:id="@+id/calc_nav"
+    app:startDestination="@+id/navigation_home">
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.uckmhnds.pythagoras.view.fragments.HomeFragment"
+        android:label="@string/title_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_navigate_to_scientific_calculator"
+            app:destination="@id/navigation_scientific_calculator" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_scientific_calculator"
+        android:name="com.uckmhnds.pythagoras.view.fragments.ScientificCalculatorFragment"
+        android:label="title_scientific_calc"
+        tools:layout="@layout/fragment_scientific_calculator" >
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_favorites"
+        android:name="com.uckmhnds.pythagoras.view.fragments.FavoritesFragment"
+        android:label="@string/title_favorites"
+        tools:layout="@layout/fragment_favorites" >
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_recent"
+        android:name="com.uckmhnds.pythagoras.view.fragments.RecentFragment"
+        android:label="@string/title_recent"
+        tools:layout="@layout/fragment_recent" >
+    </fragment>
+
+</navigation>

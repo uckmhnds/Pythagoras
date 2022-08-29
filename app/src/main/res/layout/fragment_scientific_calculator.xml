@@ -1,0 +1,937 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.fragments.ScientificCalculatorFragment">
+
+    <TextView
+        android:id="@+id/result_text_view"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_50sdp"
+        android:gravity="center"
+        android:text=""
+        android:textSize="@dimen/_40sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/scientific_input_grid_layout"
+
+        />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/scientific_input_grid_layout"
+        >
+
+        <LinearLayout
+            android:layout_alignParentEnd="true"
+            android:visibility="visible"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            >
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_scientific_calc_char"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="visible"
+                tools:visibility="visible"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+
+    <!--        11111111111111111111      -->
+    <!--        11111111111111111111      -->
+    <!--        11111111111111111111      -->
+    <!--        11111111111111111111      -->
+    <!--        11111111111111111111      -->
+
+    <GridLayout
+        android:visibility="visible"
+        android:rowCount="4"
+        android:columnCount="5"
+        android:id="@+id/scientific_input_grid_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_5sdp"
+        android:layout_marginVertical="@dimen/_5sdp"
+        app:layout_constraintTop_toBottomOf="@id/result_text_view"
+        app:layout_constraintBottom_toTopOf="@id/basic_input_grid_layout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:useDefaultMargins="true"
+        >
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv_scientific_index_11"
+            app:cardCornerRadius="@dimen/_5sdp"
+            app:cardElevation="@dimen/_5sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_width="0dp"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill_horizontal">
+
+            <ImageView
+                android:id="@+id/iv_scientific_index_11"
+                android:padding="@dimen/_5sdp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/square_root_icon"
+                android:contentDescription="TODO" />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv_scientific_index_12"
+            app:cardCornerRadius="@dimen/_5sdp"
+            app:cardElevation="@dimen/_5sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_width="0dp"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill_horizontal">
+
+            <ImageView
+                android:id="@+id/iv_scientific_index_12"
+                android:padding="@dimen/_5sdp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/left_parenthese_icon"
+                android:contentDescription="TODO" />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv_scientific_index_13"
+            app:cardCornerRadius="@dimen/_5sdp"
+            app:cardElevation="@dimen/_5sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_width="0dp"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill_horizontal">
+
+            <ImageView
+                android:id="@+id/iv_scientific_index_13"
+                android:padding="@dimen/_5sdp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/right_parenthese_icon"
+                android:contentDescription="TODO" />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv_scientific_index_14"
+            app:cardCornerRadius="@dimen/_5sdp"
+            app:cardElevation="@dimen/_5sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_width="0dp"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill_horizontal">
+
+            <ImageView
+                android:id="@+id/iv_scientific_index_14"
+                android:padding="@dimen/_5sdp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/x_square_icon"
+                android:contentDescription="TODO" />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv_scientific_index_15"
+            app:cardCornerRadius="@dimen/_5sdp"
+            app:cardElevation="@dimen/_5sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_width="0dp"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill_horizontal">
+
+            <ImageView
+                android:id="@+id/iv_scientific_index_15"
+                android:padding="@dimen/_5sdp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/power_icon"
+                android:contentDescription="TODO" />
+
+        </androidx.cardview.widget.CardView>
+
+        <!--        22222222222222222222      -->
+        <!--        22222222222222222222      -->
+        <!--        22222222222222222222      -->
+        <!--        22222222222222222222      -->
+        <!--        22222222222222222222      -->
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv_scientific_index_21"
+            app:cardCornerRadius="@dimen/_5sdp"
+            app:cardElevation="@dimen/_5sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_width="0dp"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill_horizontal">
+
+            <TextView
+                android:id="@+id/tv_scientific_index_21"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/sinus"
+                android:textSize="@dimen/_18sdp"
+                android:textColor="@color/black"
+                />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv_scientific_index_22"
+            app:cardCornerRadius="@dimen/_5sdp"
+            app:cardElevation="@dimen/_5sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_width="0dp"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill_horizontal">
+
+            <TextView
+                android:id="@+id/tv_scientific_index_22"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/co_sinus"
+                android:textSize="@dimen/_18sdp"
+                android:textColor="@color/black"
+                />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv_scientific_index_23"
+            app:cardCornerRadius="@dimen/_5sdp"
+            app:cardElevation="@dimen/_5sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_width="0dp"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill_horizontal">
+
+            <TextView
+                android:id="@+id/tv_scientific_index_23"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/tangent"
+                android:textSize="@dimen/_18sdp"
+                android:textColor="@color/black"
+                />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv_scientific_index_24"
+            app:cardCornerRadius="@dimen/_5sdp"
+            app:cardElevation="@dimen/_5sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_width="0dp"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill_horizontal">
+
+            <TextView
+                android:id="@+id/tv_scientific_index_24"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/logarithmic"
+                android:textSize="@dimen/_18sdp"
+                android:textColor="@color/black"
+                />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv_scientific_index_25"
+            app:cardCornerRadius="@dimen/_5sdp"
+            app:cardElevation="@dimen/_5sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_width="0dp"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill_horizontal">
+
+            <TextView
+                android:id="@+id/tv_scientific_index_25"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/euler"
+                android:textSize="@dimen/_18sdp"
+                android:textColor="@color/black"
+                />
+
+        </androidx.cardview.widget.CardView>
+
+        <!--        33333333333333333333      -->
+        <!--        33333333333333333333      -->
+        <!--        33333333333333333333      -->
+        <!--        33333333333333333333      -->
+        <!--        33333333333333333333      -->
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv_scientific_index_31"
+            app:cardCornerRadius="@dimen/_5sdp"
+            app:cardElevation="@dimen/_5sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_width="0dp"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill_horizontal">
+
+            <TextView
+                android:id="@+id/tv_scientific_index_31"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/sinush"
+                android:textSize="@dimen/_18sdp"
+                android:textColor="@color/black"
+                />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv_scientific_index_32"
+            app:cardCornerRadius="@dimen/_5sdp"
+            app:cardElevation="@dimen/_5sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_width="0dp"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill_horizontal">
+
+            <TextView
+                android:id="@+id/tv_scientific_index_32"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/co_sinush"
+                android:textSize="@dimen/_18sdp"
+                android:textColor="@color/black"
+                />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv_scientific_index_33"
+            app:cardCornerRadius="@dimen/_5sdp"
+            app:cardElevation="@dimen/_5sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_width="0dp"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill_horizontal">
+
+            <TextView
+                android:id="@+id/tv_scientific_index_33"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/tangenth"
+                android:textSize="@dimen/_18sdp"
+                android:textColor="@color/black"
+                />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv_scientific_index_34"
+            app:cardCornerRadius="@dimen/_5sdp"
+            app:cardElevation="@dimen/_5sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_width="0dp"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill_horizontal">
+
+            <TextView
+                android:id="@+id/tv_scientific_index_34"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/logarithmic2"
+                android:textSize="@dimen/_18sdp"
+                android:textColor="@color/black"
+                />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv_scientific_index_35"
+            app:cardCornerRadius="@dimen/_5sdp"
+            app:cardElevation="@dimen/_5sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_width="0dp"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill_horizontal">
+
+            <TextView
+                android:id="@+id/tv_scientific_index_35"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/exponential"
+                android:textSize="@dimen/_18sdp"
+                android:textColor="@color/black"
+                />
+
+        </androidx.cardview.widget.CardView>
+
+        <!--        44444444444444444444      -->
+        <!--        44444444444444444444      -->
+        <!--        44444444444444444444      -->
+        <!--        44444444444444444444      -->
+        <!--        44444444444444444444      -->
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv_scientific_index_41"
+            app:cardCornerRadius="@dimen/_5sdp"
+            app:cardElevation="@dimen/_5sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_width="0dp"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill_horizontal">
+
+            <TextView
+                android:id="@+id/tv_scientific_index_41"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/arcsin"
+                android:textSize="@dimen/_18sdp"
+                android:textColor="@color/black"
+                />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv_scientific_index_42"
+            app:cardCornerRadius="@dimen/_5sdp"
+            app:cardElevation="@dimen/_5sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_width="0dp"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill_horizontal">
+
+            <TextView
+                android:id="@+id/tv_scientific_index_42"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/arccos"
+                android:textSize="@dimen/_18sdp"
+                android:textColor="@color/black"
+                />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv_scientific_index_43"
+            app:cardCornerRadius="@dimen/_5sdp"
+            app:cardElevation="@dimen/_5sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_width="0dp"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill_horizontal">
+
+            <TextView
+                android:id="@+id/tv_scientific_index_43"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/arctan"
+                android:textSize="@dimen/_18sdp"
+                android:textColor="@color/black"
+                />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv_scientific_index_44"
+            app:cardCornerRadius="@dimen/_5sdp"
+            app:cardElevation="@dimen/_5sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_width="0dp"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill_horizontal">
+
+            <TextView
+                android:id="@+id/tv_scientific_index_44"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/logarithmic10"
+                android:textSize="@dimen/_18sdp"
+                android:textColor="@color/black"
+                />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv_scientific_index_45"
+            app:cardCornerRadius="@dimen/_5sdp"
+            app:cardElevation="@dimen/_5sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_width="0dp"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill_horizontal">
+
+            <TextView
+                android:id="@+id/tv_scientific_index_45"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/signum"
+                android:textSize="@dimen/_18sdp"
+                android:textColor="@color/black"
+                />
+
+        </androidx.cardview.widget.CardView>
+
+    </GridLayout>
+
+
+    <!--    -->
+    <!--    -->
+    <!--    -->
+    <!--    -->
+    <!--    -->
+    <!--    -->
+    <!--    -->
+
+    <GridLayout
+        android:rowCount="4"
+        android:columnCount="5"
+        android:id="@+id/basic_input_grid_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_5sdp"
+        android:layout_marginVertical="@dimen/_5sdp"
+        app:layout_constraintTop_toBottomOf="@id/scientific_input_grid_layout"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:useDefaultMargins="true"
+        >
+
+        <!--        11111111111111111111      -->
+        <!--        11111111111111111111      -->
+        <!--        11111111111111111111      -->
+        <!--        11111111111111111111      -->
+        <!--        11111111111111111111      -->
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv_index_11"
+            app:cardCornerRadius="@dimen/_5sdp"
+            app:cardElevation="@dimen/_5sdp"
+            android:layout_height="@dimen/_50sdp"
+            android:layout_width="0dp"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill_horizontal">
+
+            <ImageView
+                android:id="@+id/iv_index_11"
+                android:padding="@dimen/_5sdp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/seven_icon"
+                android:contentDescription="TODO" />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv_index_12"
+            app:cardCornerRadius="@dimen/_5sdp"
+            app:cardElevation="@dimen/_5sdp"
+            android:layout_height="@dimen/_50sdp"
+            android:layout_width="0dp"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill_horizontal">
+
+            <ImageView
+                android:id="@+id/iv_index_12"
+                android:padding="@dimen/_5sdp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/eight_icon"
+                android:contentDescription="TODO" />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv_index_13"
+            app:cardCornerRadius="@dimen/_5sdp"
+            app:cardElevation="@dimen/_5sdp"
+            android:layout_height="@dimen/_50sdp"
+            android:layout_width="0dp"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill_horizontal">
+
+            <ImageView
+                android:id="@+id/iv_index_13"
+                android:padding="@dimen/_5sdp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/nine_icon"
+                android:contentDescription="TODO" />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv_index_14"
+            app:cardCornerRadius="@dimen/_5sdp"
+            app:cardElevation="@dimen/_5sdp"
+            android:layout_height="@dimen/_50sdp"
+            android:layout_width="0dp"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill_horizontal">
+
+            <ImageView
+                android:id="@+id/iv_index_14"
+                android:padding="@dimen/_5sdp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/clear_icon"
+                android:contentDescription="TODO" />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv_index_15"
+            app:cardCornerRadius="@dimen/_5sdp"
+            app:cardElevation="@dimen/_5sdp"
+            android:layout_height="@dimen/_50sdp"
+            android:layout_width="0dp"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill_horizontal">
+
+            <ImageView
+                android:id="@+id/iv_index_15"
+                android:padding="@dimen/_5sdp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/all_clear_icon"
+                android:contentDescription="TODO" />
+
+        </androidx.cardview.widget.CardView>
+
+
+        <!--        22222222222222222222      -->
+        <!--        22222222222222222222      -->
+        <!--        22222222222222222222      -->
+        <!--        22222222222222222222      -->
+        <!--        22222222222222222222      -->
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv_index_21"
+            app:cardCornerRadius="@dimen/_5sdp"
+            app:cardElevation="@dimen/_5sdp"
+            android:layout_height="@dimen/_50sdp"
+            android:layout_width="0dp"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill_horizontal">
+
+            <ImageView
+                android:id="@+id/iv_index_21"
+                android:padding="@dimen/_5sdp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/four_icon"
+                android:contentDescription="TODO" />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv_index_22"
+            app:cardCornerRadius="@dimen/_5sdp"
+            app:cardElevation="@dimen/_5sdp"
+            android:layout_height="@dimen/_50sdp"
+            android:layout_width="0dp"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill_horizontal">
+
+            <ImageView
+                android:id="@+id/iv_index_22"
+                android:padding="@dimen/_5sdp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/five_icon"
+                android:contentDescription="TODO" />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv_index_23"
+            app:cardCornerRadius="@dimen/_5sdp"
+            app:cardElevation="@dimen/_5sdp"
+            android:layout_height="@dimen/_50sdp"
+            android:layout_width="0dp"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill_horizontal">
+
+            <ImageView
+                android:id="@+id/iv_index_23"
+                android:padding="@dimen/_5sdp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/six_icon"
+                android:contentDescription="TODO" />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv_index_24"
+            app:cardCornerRadius="@dimen/_5sdp"
+            app:cardElevation="@dimen/_5sdp"
+            android:layout_height="@dimen/_50sdp"
+            android:layout_width="0dp"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill_horizontal">
+
+            <ImageView
+                android:id="@+id/iv_index_24"
+                android:padding="@dimen/_5sdp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/times_icon"
+                android:contentDescription="TODO" />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv_index_25"
+            app:cardCornerRadius="@dimen/_5sdp"
+            app:cardElevation="@dimen/_5sdp"
+            android:layout_height="@dimen/_50sdp"
+            android:layout_width="0dp"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill_horizontal">
+
+            <ImageView
+                android:id="@+id/iv_index_25"
+                android:padding="@dimen/_5sdp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/divide_icon"
+                android:contentDescription="TODO" />
+
+        </androidx.cardview.widget.CardView>
+
+
+        <!--        33333333333333333333      -->
+        <!--        33333333333333333333      -->
+        <!--        33333333333333333333      -->
+        <!--        33333333333333333333      -->
+        <!--        33333333333333333333      -->
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv_index_31"
+            app:cardCornerRadius="@dimen/_5sdp"
+            app:cardElevation="@dimen/_5sdp"
+            android:layout_height="@dimen/_50sdp"
+            android:layout_width="0dp"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill_horizontal">
+
+            <ImageView
+                android:id="@+id/iv_index_31"
+                android:padding="@dimen/_5sdp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/one_icon"
+                android:contentDescription="TODO" />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv_index_32"
+            app:cardCornerRadius="@dimen/_5sdp"
+            app:cardElevation="@dimen/_5sdp"
+            android:layout_height="@dimen/_50sdp"
+            android:layout_width="0dp"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill_horizontal">
+
+            <ImageView
+                android:id="@+id/iv_index_32"
+                android:padding="@dimen/_5sdp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/two_icon"
+                android:contentDescription="TODO" />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv_index_33"
+            app:cardCornerRadius="@dimen/_5sdp"
+            app:cardElevation="@dimen/_5sdp"
+            android:layout_height="@dimen/_50sdp"
+            android:layout_width="0dp"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill_horizontal">
+
+            <ImageView
+                android:id="@+id/iv_index_33"
+                android:padding="@dimen/_5sdp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/three_icon"
+                android:contentDescription="TODO" />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv_index_34"
+            app:cardCornerRadius="@dimen/_5sdp"
+            app:cardElevation="@dimen/_5sdp"
+            android:layout_height="@dimen/_50sdp"
+            android:layout_width="0dp"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill_horizontal">
+
+            <ImageView
+                android:id="@+id/iv_index_34"
+                android:padding="@dimen/_5sdp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/plus_icon"
+                android:contentDescription="TODO" />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv_index_35"
+            app:cardCornerRadius="@dimen/_5sdp"
+            app:cardElevation="@dimen/_5sdp"
+            android:layout_height="@dimen/_50sdp"
+            android:layout_width="0dp"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill_horizontal">
+
+            <ImageView
+                android:id="@+id/iv_index_35"
+                android:padding="@dimen/_5sdp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/minus_icon"
+                android:contentDescription="TODO" />
+
+        </androidx.cardview.widget.CardView>
+
+        <!--        44444444444444444444      -->
+        <!--        44444444444444444444      -->
+        <!--        44444444444444444444      -->
+        <!--        44444444444444444444      -->
+        <!--        44444444444444444444      -->
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv_index_41"
+            app:cardCornerRadius="@dimen/_5sdp"
+            app:cardElevation="@dimen/_5sdp"
+            android:layout_height="@dimen/_50sdp"
+            android:layout_width="0dp"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill_horizontal">
+
+            <ImageView
+                android:id="@+id/iv_index_41"
+                android:padding="@dimen/_5sdp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/zero_icon"
+                android:contentDescription="TODO" />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv_index_42"
+            app:cardCornerRadius="@dimen/_5sdp"
+            app:cardElevation="@dimen/_5sdp"
+            android:layout_height="@dimen/_50sdp"
+            android:layout_width="0dp"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill_horizontal">
+
+            <ImageView
+                android:id="@+id/iv_index_42"
+                android:padding="@dimen/_20sdp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/dot_icon"
+                android:contentDescription="TODO" />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv_index_43"
+            app:cardCornerRadius="@dimen/_5sdp"
+            app:cardElevation="@dimen/_5sdp"
+            android:layout_height="@dimen/_50sdp"
+            android:layout_width="0dp"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill_horizontal">
+
+            <ImageView
+                android:id="@+id/iv_index_43"
+                android:padding="@dimen/_5sdp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/pi_icon"
+                android:contentDescription="TODO" />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv_index_44"
+            app:cardCornerRadius="@dimen/_5sdp"
+            app:cardElevation="@dimen/_5sdp"
+            android:layout_height="@dimen/_50sdp"
+            android:layout_width="0dp"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill_horizontal">
+
+            <ImageView
+                android:id="@+id/iv_index_44"
+                android:padding="@dimen/_5sdp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/previous_icon"
+                android:contentDescription="TODO" />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv_index_45"
+            app:cardCornerRadius="@dimen/_5sdp"
+            app:cardElevation="@dimen/_5sdp"
+            android:layout_height="@dimen/_50sdp"
+            android:layout_width="0dp"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill_horizontal">
+
+            <ImageView
+                android:id="@+id/iv_index_45"
+                android:padding="@dimen/_5sdp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/equal_icon"
+                android:contentDescription="TODO" />
+
+        </androidx.cardview.widget.CardView>
+
+    </GridLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

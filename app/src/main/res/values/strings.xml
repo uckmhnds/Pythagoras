@@ -1,0 +1,41 @@
+<resources>
+    <string name="app_name">Pythagoras</string>
+
+    <string name="title_home">Home</string>
+    <string name="title_favorites">Favorites</string>
+    <string name="title_recent">Recent</string>
+    <string name="title_scientific_calc">Scientific Calculator</string>
+
+    <string name="sinus">sin</string>
+    <string name="sinush">sinh</string>
+    <string name="arcsin">asin</string>
+    <string name="co_sinus">cos</string>
+    <string name="co_sinush">cosh</string>
+    <string name="arccos">cosh</string>
+    <string name="tangent">tan</string>
+    <string name="tangenth">tanh</string>
+    <string name="arctan">tanh</string>
+    <string name="euler">e</string>
+    <string name="logarithmic">log</string>
+    <string name="logarithmic2">log2</string>
+    <string name="logarithmic10">log10</string>
+    <string name="exponential">exp</string>
+    <string name="signum">sig</string>
+
+    <string name="basic_input_val_0">0</string>
+    <string name="basic_input_val_1">1</string>
+    <string name="basic_input_val_2">2</string>
+    <string name="basic_input_val_3">3</string>
+    <string name="basic_input_val_4">4</string>
+    <string name="basic_input_val_5">5</string>
+    <string name="basic_input_val_6">6</string>
+    <string name="basic_input_val_7">7</string>
+    <string name="basic_input_val_8">8</string>
+    <string name="basic_input_val_9">9</string>
+
+    <string name="basic_input_val_del">DEL</string>
+    <string name="basic_input_val_ac">AC</string>
+    <string name="basic_input_val_ans">ANS</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+</resources>
