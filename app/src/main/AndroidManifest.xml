@@ -4,7 +4,7 @@
     package="com.uckmhnds.pythagoras" >
 
     <application
-        android:name=".application.CalculatorApplication"
+        android:name=".application.PythagorasApplication"
         android:allowBackup="false"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"

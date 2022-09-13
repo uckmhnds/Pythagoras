@@ -9,7 +9,7 @@ import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.uckmhnds.pythagoras.R
-import com.uckmhnds.pythagoras.application.CalculatorApplication
+import com.uckmhnds.pythagoras.application.PythagorasApplication
 import com.uckmhnds.pythagoras.databinding.FragmentRecentBinding
 import com.uckmhnds.pythagoras.model.entities.RecentAction
 import com.uckmhnds.pythagoras.view.adapters.RecentActionAdapter
@@ -26,7 +26,7 @@ class RecentFragment: Fragment(), View.OnClickListener {
     private lateinit var adapter: RecentActionAdapter
 
     private val recentViewModel: RecentViewModel by viewModels {
-        RecentViewModelFactory((requireActivity().application as CalculatorApplication).repository)
+        RecentViewModelFactory((requireActivity().application as PythagorasApplication).repository)
     }
 
     private lateinit var calendar: Calendar
@@ -37,7 +37,7 @@ class RecentFragment: Fragment(), View.OnClickListener {
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
 
         binding                 = FragmentRecentBinding.inflate(inflater, container, false)
 

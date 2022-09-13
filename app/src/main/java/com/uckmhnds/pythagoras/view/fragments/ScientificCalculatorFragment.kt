@@ -11,7 +11,7 @@ import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.uckmhnds.pythagoras.R
-import com.uckmhnds.pythagoras.application.CalculatorApplication
+import com.uckmhnds.pythagoras.application.PythagorasApplication
 import com.uckmhnds.pythagoras.databinding.FragmentScientificCalculatorBinding
 import com.uckmhnds.pythagoras.model.entities.RecentAction
 import com.uckmhnds.pythagoras.view.adapters.ScientificCalculatorCharacterAdapter
@@ -39,7 +39,7 @@ class ScientificCalculatorFragment: Fragment(), View.OnClickListener  {
     private var stackFromEnd: Boolean = true
 
     private val viewModel: ScientificCalculatorViewModel by viewModels {
-        ScientificCalculatorViewModelFactory((requireActivity().application as CalculatorApplication).repository)
+        ScientificCalculatorViewModelFactory((requireActivity().application as PythagorasApplication).repository)
     }
 
     private lateinit var calendar: Calendar
